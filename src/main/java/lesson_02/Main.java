@@ -10,7 +10,7 @@ public class Main {
 //        triangle.isTriangle();
 
 
-        InteractiveChecker interactiveChecker = new InteractiveChecker(100);
+        InteractiveChecker interactiveChecker = new InteractiveChecker(25);
         interactiveChecker.printInts();
 
             }

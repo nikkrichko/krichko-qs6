@@ -15,7 +15,7 @@ public class InteractiveChecker {
 
     public void printInts(){
         for(katet1 = 1; katet1< step; katet1++){
-            for(katet2 = 1; katet2 < step; katet2++) {
+            for(katet2 = step; katet2 >0; katet2--) {
                 double temp = Math.sqrt(katet1*katet1 + katet2*katet2);
                 if ((int)temp == temp){
                     System.out.println("katet1 = " + katet1);
@@ -24,6 +24,7 @@ public class InteractiveChecker {
                     System.out.println("===========");
                     System.out.println();
                     counter++;
+                    if (katet1 == katet2) {return;}
                 }
             }
         }
