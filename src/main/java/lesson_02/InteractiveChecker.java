@@ -5,7 +5,29 @@ package lesson_02;
  */
 public class InteractiveChecker {
 
-    int katet1, katet2, gipotenusa;
+    private int katet1, katet2, gipotenusa;
+    private int step;
+    int counter = 0;
 
+    public InteractiveChecker(int step) {
+        this.step = step;
+    }
+
+    public void printInts(){
+        for(katet1 = 1; katet1< step; katet1++){
+            for(katet2 = 1; katet2 < step; katet2++) {
+                double temp = Math.sqrt(katet1*katet1 + katet2*katet2);
+                if ((int)temp == temp){
+                    System.out.println("katet1 = " + katet1);
+                    System.out.println("katet2 = " + katet2);
+                    System.out.println("gipotenuza = " + temp);
+                    System.out.println("===========");
+                    System.out.println();
+                    counter++;
+                }
+            }
+        }
+        System.out.println("all variants: " + counter);
+    }
 
 }
