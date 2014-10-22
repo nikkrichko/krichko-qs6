@@ -4,6 +4,7 @@
     <test name="Nopackage" >
         <classes>
             <class name="simple.Test" />
+            <class name="lesson_03.MathemTest" />
         </classes>
     </test>
 </suite>
