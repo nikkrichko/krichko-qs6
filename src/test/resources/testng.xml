@@ -2,9 +2,15 @@
 
 <suite name="Suite1" verbose="1" >
     <test name="Nopackage" >
+
+        <parameter name="Email" value="yjrrdk@ya.ru" />
+        <parameter name="WrongEmail" value="yjrrdk" />
+
         <classes>
             <class name="simple.Test" />
             <class name="lesson_03.MathemTest" />
+            <class name="homework_03.EmailValidatorTest" />
+
         </classes>
     </test>
 </suite>
