@@ -8,8 +8,8 @@
 
         <classes>
             <class name="simple.Test" />
-            <class name="lesson_03.MathemTest" />
-            <class name="homework_03.EmailValidatorTest" />
+            <class name="lessons.lesson_03.MathemTest" />
+            <class name="homeworks.homework_03.EmailValidatorTest" />
 
         </classes>
     </test>

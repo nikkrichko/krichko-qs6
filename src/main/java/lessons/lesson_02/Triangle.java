@@ -1,4 +1,4 @@
-package lesson_02;
+package lessons.lesson_02;
 
 /**
  * Created by bionic on 10/21/14.

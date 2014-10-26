@@ -1,9 +1,7 @@
-package lesson_03;
+package lessons.lesson_03;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
 
 public class MathemTest {
     @Test

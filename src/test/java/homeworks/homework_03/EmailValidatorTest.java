@@ -1,4 +1,4 @@
-package homework_03;
+package homeworks.homework_03;
 
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
