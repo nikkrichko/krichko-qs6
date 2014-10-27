@@ -1,8 +1,5 @@
 package lessons.lesson_01;
 
-/**
- * Created by bionic on 10/15/14.
- */
 public class ReversString {
     private String reverseString;
 

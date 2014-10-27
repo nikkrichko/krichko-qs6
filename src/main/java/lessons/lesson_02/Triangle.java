@@ -1,8 +1,5 @@
 package lessons.lesson_02;
 
-/**
- * Created by bionic on 10/21/14.
- */
 public class Triangle {
     int a, b, c;
 
