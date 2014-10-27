@@ -5,11 +5,12 @@
         <parameter name="Email" value="yjrrdk@ya.ru" />
         <parameter name="WrongEmail" value="yjrrdk" />
         <classes>
-            <class name="simple.Test" />
-            <class name="lessons.lesson_03.MathemTest" />
-            <class name="homeworks.homework_03.EmailValidatorTest" />
-            <class name="lessons.lesson_04.lessonTest04" />
-            <class name="lessons.lesson_04.Lessontest0401" />
+            <!--<class name="simple.Test" />-->
+            <!--<class name="lessons.lesson_03.MathemTest" />-->
+            <!--<class name="homeworks.homework_03.EmailValidatorTest" />-->
+            <!--<class name="lessons.lesson_04.lessonTest04" />-->
+            <!--<class name="lessons.lesson_04.Lessontest0401" />-->
+            <class name="homeworks.homework_04.SubstringFinderTest" />
         </classes>
     </test>
 </suite>
