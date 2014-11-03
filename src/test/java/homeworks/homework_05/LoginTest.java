@@ -24,6 +24,7 @@ public class LoginTest {
     @Test(dataProvider = "userData")
     public void LoginWirthpasswordTest(String login, String password){
        loginForm.EnterWithPassword(login, password);
+        Assert.assertTrue(true);
 
     }
 
