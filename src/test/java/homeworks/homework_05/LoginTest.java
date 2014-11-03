@@ -1,5 +1,6 @@
 package homeworks.homework_05;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -22,27 +23,47 @@ public class LoginTest {
 
     @Test(dataProvider = "userData")
     public void LoginWirthpasswordTest(String login, String password){
-        loginForm.EnterWithPassword(login, password);
+        try {
+            loginForm.EnterWithPassword(login, password);
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
     @Test
     public void LoginWithVkontakteTest(){
-        loginForm.EnterWithVkontekte();
+        try {
+            loginForm.EnterWithVkontekte();
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
     @Test
     public void LoginWithFaceBookTest(){
-        loginForm.EnterWithFacebook();
+        try {
+            loginForm.EnterWithFacebook();
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
     @Test
     public void LoginWithGooglePlusTest(){
-        loginForm.EnterWithGooglePlus();
+        try {
+            loginForm.EnterWithGooglePlus();
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
     @Test
     public void LoginWithTwitterTest(){
-        loginForm.EnterWithTwitter();
+        try {
+            loginForm.EnterWithTwitter();
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
 

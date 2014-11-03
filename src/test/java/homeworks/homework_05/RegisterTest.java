@@ -1,5 +1,6 @@
 package homeworks.homework_05;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -22,27 +23,47 @@ public class RegisterTest {
 
     @Test(dataProvider = "userData")
     public void LoginWirthpasswordTest(String email, String userName, String password, String confirmPassword){
-        registerPage.register(email,userName, password, confirmPassword);
+        try {
+            registerPage.register(email,userName, password, confirmPassword);
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
     @Test
     public void LoginWithVkontakteTest(){
-        registerPage.EnterWithVkontekte();
+        try {
+            registerPage.EnterWithVkontekte();
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
     @Test
     public void LoginWithFaceBookTest(){
-        registerPage.EnterWithFacebook();
+        try {
+            registerPage.EnterWithFacebook();
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
     @Test
     public void LoginWithGooglePlusTest(){
-        registerPage.EnterWithGooglePlus();
+        try {
+            registerPage.EnterWithGooglePlus();
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
     @Test
     public void LoginWithTwitterTest(){
-        registerPage.EnterWithTwitter();
+        try {
+            registerPage.EnterWithTwitter();
+        } catch (Exception e) {
+            Assert.assertFalse(false);
+        }
     }
 
 
