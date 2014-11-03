@@ -26,7 +26,7 @@ public class LoginTest {
         try {
             loginForm.EnterWithPassword(login, password);
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
@@ -35,7 +35,7 @@ public class LoginTest {
         try {
             loginForm.EnterWithVkontekte();
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
@@ -44,7 +44,7 @@ public class LoginTest {
         try {
             loginForm.EnterWithFacebook();
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
@@ -53,7 +53,7 @@ public class LoginTest {
         try {
             loginForm.EnterWithGooglePlus();
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
@@ -62,7 +62,7 @@ public class LoginTest {
         try {
             loginForm.EnterWithTwitter();
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 

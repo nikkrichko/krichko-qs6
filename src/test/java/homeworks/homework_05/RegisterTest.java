@@ -26,7 +26,7 @@ public class RegisterTest {
         try {
             registerPage.register(email,userName, password, confirmPassword);
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
@@ -35,7 +35,7 @@ public class RegisterTest {
         try {
             registerPage.EnterWithVkontekte();
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
@@ -44,7 +44,7 @@ public class RegisterTest {
         try {
             registerPage.EnterWithFacebook();
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
@@ -53,7 +53,7 @@ public class RegisterTest {
         try {
             registerPage.EnterWithGooglePlus();
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
@@ -62,7 +62,7 @@ public class RegisterTest {
         try {
             registerPage.EnterWithTwitter();
         } catch (Exception e) {
-            Assert.assertFalse(false);
+            Assert.assertFalse(true);
         }
     }
 
