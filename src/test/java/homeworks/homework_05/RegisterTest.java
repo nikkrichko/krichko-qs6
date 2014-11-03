@@ -23,47 +23,27 @@ public class RegisterTest {
 
     @Test(dataProvider = "userData")
     public void LoginWirthpasswordTest(String email, String userName, String password, String confirmPassword){
-        try {
-            registerPage.register(email,userName, password, confirmPassword);
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        registerPage.register(email,userName, password, confirmPassword);
     }
 
     @Test
     public void LoginWithVkontakteTest(){
-        try {
-            registerPage.EnterWithVkontekte();
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        registerPage.EnterWithVkontekte();
     }
 
     @Test
     public void LoginWithFaceBookTest(){
-        try {
-            registerPage.EnterWithFacebook();
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        registerPage.EnterWithFacebook();
     }
 
     @Test
     public void LoginWithGooglePlusTest(){
-        try {
-            registerPage.EnterWithGooglePlus();
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        registerPage.EnterWithGooglePlus();
     }
 
     @Test
     public void LoginWithTwitterTest(){
-        try {
-            registerPage.EnterWithTwitter();
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        registerPage.EnterWithTwitter();
     }
 
 

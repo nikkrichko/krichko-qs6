@@ -23,47 +23,28 @@ public class LoginTest {
 
     @Test(dataProvider = "userData")
     public void LoginWirthpasswordTest(String login, String password){
-        try {
-            loginForm.EnterWithPassword(login, password);
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+       loginForm.EnterWithPassword(login, password);
+
     }
 
     @Test
     public void LoginWithVkontakteTest(){
-        try {
-            loginForm.EnterWithVkontekte();
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        loginForm.EnterWithVkontekte();
     }
 
     @Test
     public void LoginWithFaceBookTest(){
-        try {
-            loginForm.EnterWithFacebook();
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        loginForm.EnterWithFacebook();
     }
 
     @Test
     public void LoginWithGooglePlusTest(){
-        try {
-            loginForm.EnterWithGooglePlus();
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        loginForm.EnterWithGooglePlus();
     }
 
     @Test
     public void LoginWithTwitterTest(){
-        try {
-            loginForm.EnterWithTwitter();
-        } catch (Exception e) {
-            Assert.assertFalse(true);
-        }
+        loginForm.EnterWithTwitter();
     }
 
 
