@@ -1,6 +1,17 @@
 package homeworks.homework_05;
 
+import org.openqa.selenium.WebDriver;
+
 public class RegisterPage extends LoginRegisterPage {
+
+
+    public RegisterPage(WebDriver webDriver) {
+        super(webDriver);
+    }
+
+    public RegisterPage() {
+
+    }
 
     public void register(String email, String userName, String password, String confirmPassword){
         enterEmail(email);

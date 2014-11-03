@@ -1,6 +1,18 @@
 package homeworks.homework_05;
 
+import org.openqa.selenium.WebDriver;
+
 public class LoginRegisterPage {
+
+    public LoginRegisterPage() {
+    }
+
+    public LoginRegisterPage(WebDriver webDriver) {
+        this.webDriver = webDriver;
+    }
+
+    public WebDriver webDriver;
+
     public void EnterWithVkontekte(){
 
     }
