@@ -14,6 +14,7 @@
             <!--<class name="homeworks.homework_05.LoginTest" />-->
             <!--<class name="homeworks.homework_05.RegisterTest" />-->
             <class name="homeworks.homework_06.RegisterTest" />
+            <!--<class name="lessons.lesson_07" />-->
         </classes>
     </test>
 </suite>
