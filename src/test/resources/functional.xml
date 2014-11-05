@@ -11,9 +11,9 @@
             <!--<class name="lessons.lesson_04.lessonTest04" />-->
             <!--<class name="lessons.lesson_04.Lessontest0401" />-->
             <!--<class name="homeworks.homework_04.SubstringFinderTest" />-->
-            <class name="homeworks.homework_05.LoginTest" />
-            <class name="homeworks.homework_05.RegisterTest" />
-
+            <!--<class name="homeworks.homework_05.LoginTest" />-->
+            <!--<class name="homeworks.homework_05.RegisterTest" />-->
+            <class name="homeworks.homework_06.RegisterTest" />
         </classes>
     </test>
 </suite>
