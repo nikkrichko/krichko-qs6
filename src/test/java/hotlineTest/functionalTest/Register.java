@@ -45,7 +45,7 @@ public class Register {
     public void reisterTest() {
 
         mainPage.getMainPage();
-
+        mainPage.pressRegisterLink();
         registerPage = new RegisterPage(user, webDriver);
         registerPage.register();
         welcomePage = new WelcomePage(webDriver);

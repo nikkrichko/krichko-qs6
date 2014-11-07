@@ -15,6 +15,7 @@ public class MainPage {
     public MainPage(WebDriver webDriver) {
         this.webDriver = webDriver;
         this.WebSiteName = "http://hotline.ua/";
+
     }
 
     public WebDriver webDriver;
@@ -22,12 +23,14 @@ public class MainPage {
     public WebElement LOGIN_LINK;
     public WebElement SEARCH_STRING;
     public WebElement searchButton;
+    public WebElement closeVisaBanner;
+    public WebElement closeCity;
     public String WebSiteName;
 
     public void pressRegisterLink() {
-        REGISTER_LINK = webDriver.findElement(By.className("reg"));
-        REGISTER_LINK.click();
-//        getREGISTER_LINK().click();
+//        REGISTER_LINK = webDriver.findElement(By.className("reg"));
+//        REGISTER_LINK.click();
+        getREGISTER_LINK().click();
     }
 
     public void pressLoginLink() {
@@ -41,9 +44,12 @@ public class MainPage {
 
     public void getMainPage() {
         webDriver.get(WebSiteName);
+        closeOtherElements();
     }
 
     public WebElement getREGISTER_LINK() {
+//        return REGISTER_LINK = webDriver.findElement(By.xpath("//*[.=' Зарегистрироваться ']"));
+
         return REGISTER_LINK = webDriver.findElement(By.className("reg"));
     }
 
@@ -57,9 +63,23 @@ public class MainPage {
 
     public WebElement getSearchButton() {
         return searchButton = webDriver.findElement(By.id("doSearch"));
-
-
     }
 
+    public WebElement getCloseVisaBanner() {
+        closeVisaBanner = webDriver.findElement(By.id("lightbox-form")).findElement(By.tagName("span"));
+        return closeVisaBanner;
+    }
 
+    public WebElement getCloseCity() {
+        return closeCity = webDriver
+                .findElement(By.className("rgn-box sbj popup-box region-doubtfulness-popup"))
+                .findElement(By.className("close"));
+    }
+
+    public void closeOtherElements() {
+        if (getCloseVisaBanner().isDisplayed()) {
+            getCloseVisaBanner().click();
+        }
+//        if (getCloseCity().isDisplayed()){getCloseCity().click();}
+    }
 }
