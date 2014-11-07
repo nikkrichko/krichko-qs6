@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 /**
  * Created by bionic on 11/5/14.
  */
-public class lesson_07 {
+public class FindProduct {
 
     WebDriver webDriver;
     MainPage mainPage;
