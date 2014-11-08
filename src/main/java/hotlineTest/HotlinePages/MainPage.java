@@ -28,9 +28,9 @@ public class MainPage {
     public String WebSiteName;
 
     public void pressRegisterLink() {
-//        REGISTER_LINK = webDriver.findElement(By.className("reg"));
-//        REGISTER_LINK.click();
-        getREGISTER_LINK().click();
+        REGISTER_LINK = webDriver.findElement(By.className("reg"));
+        REGISTER_LINK.click();
+//        getREGISTER_LINK().click();
     }
 
     public void pressLoginLink() {
@@ -44,7 +44,7 @@ public class MainPage {
 
     public void getMainPage() {
         webDriver.get(WebSiteName);
-        closeOtherElements();
+//        closeOtherElements();
     }
 
     public WebElement getREGISTER_LINK() {

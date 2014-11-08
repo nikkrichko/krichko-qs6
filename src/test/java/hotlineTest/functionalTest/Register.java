@@ -43,7 +43,6 @@ public class Register {
 
     @Test(priority = 1)
     public void reisterTest() {
-
         mainPage.getMainPage();
         mainPage.pressRegisterLink();
         registerPage = new RegisterPage(user, webDriver);
@@ -57,7 +56,7 @@ public class Register {
     public void doubleRegister() {
 
         mainPage.getMainPage();
-        webDriver.navigate().refresh();
+//        webDriver.navigate().refresh();
         mainPage.pressRegisterLink();
         registerPage = new RegisterPage(user, webDriver);
         registerPage.register();
