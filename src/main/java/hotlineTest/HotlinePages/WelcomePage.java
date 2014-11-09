@@ -7,8 +7,17 @@ import org.openqa.selenium.WebElement;
 public class WelcomePage {
 
     WebDriver webDriver;
-    public WebElement WELCOME_PAGE_FIRST_NAME;
-    public WebElement WELCOME_PAGE_SECOND_NAME;
+    private WebElement WELCOME_PAGE_FIRST_NAME;
+
+    public WebElement getWELCOME_PAGE_FIRST_NAME() {
+        return WELCOME_PAGE_FIRST_NAME;
+    }
+
+    public WebElement getWELCOME_PAGE_SECOND_NAME() {
+        return WELCOME_PAGE_SECOND_NAME;
+    }
+
+    private WebElement WELCOME_PAGE_SECOND_NAME;
 
     public WelcomePage(WebDriver webDriver) {
         this.webDriver = webDriver;

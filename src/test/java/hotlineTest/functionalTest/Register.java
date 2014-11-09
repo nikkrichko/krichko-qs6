@@ -41,8 +41,8 @@ public class Register extends FunctionalTest {
         registerPage = new RegisterPage(user, webDriver);
         registerPage.register();
         welcomePage = new WelcomePage(webDriver);
-        Assert.assertTrue(welcomePage.WELCOME_PAGE_FIRST_NAME.isDisplayed());
-        Assert.assertTrue(welcomePage.WELCOME_PAGE_SECOND_NAME.isDisplayed());
+        Assert.assertTrue(welcomePage.getWELCOME_PAGE_FIRST_NAME().isDisplayed());
+        Assert.assertTrue(welcomePage.getWELCOME_PAGE_SECOND_NAME().isDisplayed());
     }
 
     @Test(priority = 2)

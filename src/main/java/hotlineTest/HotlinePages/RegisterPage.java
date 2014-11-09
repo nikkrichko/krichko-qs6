@@ -8,12 +8,12 @@ public class RegisterPage {
     private User user;
     private WebDriver webDriver;
 
-    public WebElement EMAIL_FIELD;
-    public WebElement USER_NAME_FIELD;
-    public WebElement PASSWORD_FIELD;
-    public WebElement CONFIRM_PASWORD_FIELD;
-    public WebElement REGISTER_BUTTON;
-    public WebElement ERROR_PROFF;
+    private WebElement EMAIL_FIELD;
+    private WebElement USER_NAME_FIELD;
+    private WebElement PASSWORD_FIELD;
+    private WebElement CONFIRM_PASWORD_FIELD;
+    private WebElement REGISTER_BUTTON;
+    private WebElement ERROR_PROFF;
 
     public RegisterPage(User user, WebDriver webDriver) {
         this.user = user;

@@ -18,19 +18,17 @@ public class MainPage {
 
     }
 
-    public WebDriver webDriver;
-    public WebElement REGISTER_LINK;
-    public WebElement LOGIN_LINK;
-    public WebElement SEARCH_STRING;
-    public WebElement searchButton;
-    public WebElement closeVisaBanner;
-    public WebElement closeCity;
-    public String WebSiteName;
+    private WebDriver webDriver;
+    private WebElement REGISTER_LINK;
+    private WebElement LOGIN_LINK;
+    private WebElement SEARCH_STRING;
+    private WebElement searchButton;
+    private WebElement closeVisaBanner;
+    private WebElement closeCity;
+    private String WebSiteName;
 
     public void pressRegisterLink() {
-        REGISTER_LINK = webDriver.findElement(By.className("reg"));
-        REGISTER_LINK.click();
-//        getREGISTER_LINK().click();
+        getREGISTER_LINK().click();
     }
 
     public void pressLoginLink() {
@@ -44,12 +42,9 @@ public class MainPage {
 
     public void getMainPage() {
         webDriver.get(WebSiteName);
-//        closeOtherElements();
     }
 
     public WebElement getREGISTER_LINK() {
-//        return REGISTER_LINK = webDriver.findElement(By.xpath("//*[.=' Зарегистрироваться ']"));
-
         return REGISTER_LINK = webDriver.findElement(By.className("reg"));
     }
 
