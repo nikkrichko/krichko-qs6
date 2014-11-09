@@ -6,7 +6,7 @@
         <parameter name="WrongEmail" value="yjrrdk"/>
         <classes>
 
-
+            <class name="hotlineTest.functionalTest.FunctionalTest"/>
             <class name="hotlineTest.functionalTest.Register"/>
             <class name="hotlineTest.functionalTest.FindProduct"/>
         </classes>

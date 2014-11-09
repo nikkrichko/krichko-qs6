@@ -5,14 +5,13 @@ import hotlineTest.HotlinePages.RegisterPage;
 import hotlineTest.HotlinePages.User;
 import hotlineTest.HotlinePages.WelcomePage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Register {
+public class Register extends FunctionalTest {
     WebDriver webDriver;
     MainPage mainPage;
     RegisterPage registerPage;
@@ -21,25 +20,19 @@ public class Register {
 
 
     @BeforeClass
-    public void startBrowser() {
-        webDriver = new FirefoxDriver();
+    public void initBrowser() {
+        webDriver = FunctionalTest.webDriver;
         user = new User();
     }
 
     @AfterClass
     public void closeBrowser() {
-        webDriver.quit();
     }
 
     @BeforeMethod
     public void setup() {
         mainPage = new MainPage(webDriver);
     }
-
-//    @AfterMethod
-//    public void theEnd(){
-//        webDriver.close();
-//    }
 
     @Test(priority = 1)
     public void reisterTest() {
@@ -56,7 +49,6 @@ public class Register {
     public void doubleRegister() {
 
         mainPage.getMainPage();
-//        webDriver.navigate().refresh();
         mainPage.pressRegisterLink();
         registerPage = new RegisterPage(user, webDriver);
         registerPage.register();

@@ -10,14 +10,19 @@ import org.openqa.selenium.WebElement;
 public class GoodsPage {
 
     WebDriver webDriver;
-    private WebElement goods;
+    private WebElement good;
+
 
     public GoodsPage(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
 
     public WebElement getGoods(String goodName) {
-        return goods = webDriver.findElement(By.xpath("//*[.='" + goodName + "']"));
+        return good = webDriver.findElement(By.xpath("//*[.='" + goodName + "']"));
+    }
+
+    public boolean getNoGoods(String goodName) {
+        return webDriver.findElements(By.xpath("//*[.='" + goodName + "']")).isEmpty() ;
     }
 
 

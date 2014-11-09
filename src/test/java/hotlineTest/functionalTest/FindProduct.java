@@ -3,7 +3,6 @@ package hotlineTest.functionalTest;
 import hotlineTest.HotlinePages.GoodsPage;
 import hotlineTest.HotlinePages.MainPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,18 +12,17 @@ import org.testng.annotations.Test;
 /**
  * Created by bionic on 11/5/14.
  */
-public class FindProduct {
+public class FindProduct extends FunctionalTest {
 
     WebDriver webDriver;
     MainPage mainPage;
     GoodsPage goodsPage;
     String product = "iPhone";
-
+    String noneProduct = "yablophone";
 
     @BeforeClass
-    public void startBrowser() {
-        webDriver = new FirefoxDriver();
-
+    public void initDriver() {
+        webDriver = FunctionalTest.webDriver;
     }
 
     @AfterClass
@@ -43,5 +41,13 @@ public class FindProduct {
         mainPage.serchProduct(product);
         goodsPage = new GoodsPage(webDriver);
         Assert.assertTrue(goodsPage.getGoods(product).isDisplayed());
+    }
+
+    @Test
+    public void findProductNegative() {
+        mainPage.getMainPage();
+        mainPage.serchProduct(noneProduct);
+        goodsPage = new GoodsPage(webDriver);
+        Assert.assertTrue(goodsPage.getNoGoods(noneProduct));
     }
 }
