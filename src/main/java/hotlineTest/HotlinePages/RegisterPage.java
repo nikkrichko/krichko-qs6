@@ -1,5 +1,6 @@
 package hotlineTest.HotlinePages;
 
+import hotlineTest.utils.Log4Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,10 +23,12 @@ public class RegisterPage {
     }
 
     public void register() {
+        Log4Test.info("feel register form");
         EMAIL_FIELD.sendKeys(user.getUserEmail());
         USER_NAME_FIELD.sendKeys(user.getUserName());
         PASSWORD_FIELD.sendKeys(user.getPassword());
         CONFIRM_PASWORD_FIELD.sendKeys(user.getPassword());
+        Log4Test.info("and press register button");
         REGISTER_BUTTON.submit();
     }
 

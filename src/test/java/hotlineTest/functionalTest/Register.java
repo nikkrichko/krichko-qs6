@@ -4,6 +4,7 @@ import hotlineTest.HotlinePages.MainPage;
 import hotlineTest.HotlinePages.RegisterPage;
 import hotlineTest.HotlinePages.User;
 import hotlineTest.HotlinePages.WelcomePage;
+import hotlineTest.utils.Log4Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -20,9 +21,10 @@ public class Register extends FunctionalTest {
 
 
     @BeforeClass
-    public void initBrowser() {
+    public void initDriver() {
         webDriver = FunctionalTest.webDriver;
         user = new User();
+        Log4Test.info("start test " + getClass().getName());
     }
 
     @AfterClass
@@ -30,12 +32,13 @@ public class Register extends FunctionalTest {
     }
 
     @BeforeMethod
-    public void setup() {
+    public void setup() throws NoSuchMethodException {
         mainPage = new MainPage(webDriver);
-    }
+        }
 
     @Test(priority = 1)
-    public void reisterTest() {
+    public void registerTest() {
+        Log4Test.info("positive test register");
         mainPage.getMainPage();
         mainPage.pressRegisterLink();
         registerPage = new RegisterPage(user, webDriver);
@@ -43,11 +46,12 @@ public class Register extends FunctionalTest {
         welcomePage = new WelcomePage(webDriver);
         Assert.assertTrue(welcomePage.getWELCOME_PAGE_FIRST_NAME().isDisplayed());
         Assert.assertTrue(welcomePage.getWELCOME_PAGE_SECOND_NAME().isDisplayed());
+        this.getClass().getEnclosingMethod();
     }
 
     @Test(priority = 2)
     public void doubleRegister() {
-
+        Log4Test.info("negative test register");
         mainPage.getMainPage();
         mainPage.pressRegisterLink();
         registerPage = new RegisterPage(user, webDriver);

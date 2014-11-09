@@ -11,6 +11,7 @@ public class GoodsPage {
 
     WebDriver webDriver;
     private WebElement good;
+    private WebElement priceButton;
 
 
     public GoodsPage(WebDriver webDriver) {
@@ -24,6 +25,15 @@ public class GoodsPage {
     public boolean getNoGoods(String goodName) {
         return webDriver.findElements(By.xpath("//*[.='" + goodName + "']")).isEmpty() ;
     }
+
+    public void productPrice(){
+        priceButton = webDriver.findElement(By.className("price"))
+                .findElement(By.className("but-box"));
+        priceButton.click();
+    }
+
+
+
 
 
 }

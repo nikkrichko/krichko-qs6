@@ -9,6 +9,7 @@
             <class name="hotlineTest.functionalTest.FunctionalTest"/>
             <class name="hotlineTest.functionalTest.Register"/>
             <class name="hotlineTest.functionalTest.FindProduct"/>
+            <class name="hotlineTest.functionalTest.ProductPrice"/>
         </classes>
     </test>
 </suite>

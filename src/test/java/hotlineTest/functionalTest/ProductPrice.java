@@ -2,6 +2,7 @@ package hotlineTest.functionalTest;
 
 import hotlineTest.HotlinePages.GoodsPage;
 import hotlineTest.HotlinePages.MainPage;
+import hotlineTest.HotlinePages.ProductPage;
 import hotlineTest.utils.Log4Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -10,42 +11,34 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 /**
- * Created by bionic on 11/5/14.
+ * Created by никита on 09.11.2014.
  */
-public class FindProduct extends FunctionalTest {
-
+public class ProductPrice extends FunctionalTest{
     WebDriver webDriver;
+    String product = "iPhone";
     MainPage mainPage;
     GoodsPage goodsPage;
-    String product = "iPhone";
-    String noneProduct = "yablophone";
+    ProductPage productPage;
 
     @BeforeClass
-    public void initDriver() {
+    public void initDriver(){
         webDriver = FunctionalTest.webDriver;
+        mainPage = new MainPage(webDriver);
         Log4Test.info("start test " + getClass().getName());
     }
 
     @BeforeMethod
-    public void setup() {
-        mainPage = new MainPage(webDriver);
-    }
-
-    @Test
-    public void findProduct() {
-        Log4Test.info("positive findProduct " + product);
+    public void initTest(){
         mainPage.getMainPage();
         mainPage.serchProduct(product);
-        goodsPage = new GoodsPage(webDriver);
-        Assert.assertTrue(goodsPage.getGoods(product).isDisplayed());
     }
 
     @Test
-    public void findProductNegative() {
-        Log4Test.info("negative findProduct " + noneProduct);
-        mainPage.getMainPage();
-        mainPage.serchProduct(noneProduct);
+    public void OneThanOnePrice(){
+        Log4Test.info("positive check that one than one price");
         goodsPage = new GoodsPage(webDriver);
-        Assert.assertTrue(goodsPage.getNoGoods(noneProduct));
+        goodsPage.productPrice();
+        productPage = new ProductPage(webDriver);
+        Assert.assertTrue(productPage.isMoreThanOnePrice());
     }
 }

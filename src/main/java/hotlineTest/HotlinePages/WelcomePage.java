@@ -1,5 +1,6 @@
 package hotlineTest.HotlinePages;
 
+import hotlineTest.utils.Log4Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,6 +22,7 @@ public class WelcomePage {
 
     public WelcomePage(WebDriver webDriver) {
         this.webDriver = webDriver;
+        Log4Test.info("find field on welcome page");
         WELCOME_PAGE_FIRST_NAME = webDriver.findElement(By.name("first_name"));
         WELCOME_PAGE_SECOND_NAME = webDriver.findElement(By.name("last_name"));
     }
