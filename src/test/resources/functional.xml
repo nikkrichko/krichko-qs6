@@ -8,7 +8,7 @@
 
 
             <class name="hotlineTest.functionalTest.Register"/>
-            <!--<class name="hotlineTest.functionalTest.FindProduct"/>-->
+            <class name="hotlineTest.functionalTest.FindProduct"/>
         </classes>
     </test>
 </suite>
