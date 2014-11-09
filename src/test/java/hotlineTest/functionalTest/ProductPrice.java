@@ -24,7 +24,7 @@ public class ProductPrice extends FunctionalTest{
     public void initDriver(){
         webDriver = FunctionalTest.webDriver;
         mainPage = new MainPage(webDriver);
-        Log4Test.info("start test " + getClass().getName());
+        Log4Test.info("###start test " + getClass().getName());
     }
 
     @BeforeMethod
@@ -40,5 +40,6 @@ public class ProductPrice extends FunctionalTest{
         goodsPage.productPrice();
         productPage = new ProductPage(webDriver);
         Assert.assertTrue(productPage.isMoreThanOnePrice());
+        Log4Test.info("SUCCESS");
     }
 }

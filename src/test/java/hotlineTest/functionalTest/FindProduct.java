@@ -23,8 +23,10 @@ public class FindProduct extends FunctionalTest {
     @BeforeClass
     public void initDriver() {
         webDriver = FunctionalTest.webDriver;
-        Log4Test.info("start test " + getClass().getName());
+        Log4Test.info("###start test " + getClass().getName());
     }
+
+
 
     @BeforeMethod
     public void setup() {
@@ -38,6 +40,7 @@ public class FindProduct extends FunctionalTest {
         mainPage.serchProduct(product);
         goodsPage = new GoodsPage(webDriver);
         Assert.assertTrue(goodsPage.getGoods(product).isDisplayed());
+        Log4Test.info("SUCCESS");
     }
 
     @Test
@@ -47,5 +50,6 @@ public class FindProduct extends FunctionalTest {
         mainPage.serchProduct(noneProduct);
         goodsPage = new GoodsPage(webDriver);
         Assert.assertTrue(goodsPage.getNoGoods(noneProduct));
+        Log4Test.info("SUCCESS");
     }
 }

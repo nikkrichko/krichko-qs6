@@ -15,13 +15,16 @@ public class FunctionalTest {
 
     @BeforeSuite
     public static void startBrowser(){
+
         Log4Test.info("browser start");
+        Log4Test.info("*************");
         webDriver = new FirefoxDriver();
 
     }
 
     @AfterSuite
     public static void closeDriver(){
+        Log4Test.info("*************");
         Log4Test.info("browser close");
         webDriver.quit();
     }
