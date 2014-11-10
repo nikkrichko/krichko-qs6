@@ -49,7 +49,8 @@ public class FindProduct extends FunctionalTest {
         mainPage.getMainPage();
         mainPage.serchProduct(noneProduct);
         goodsPage = new GoodsPage(webDriver);
-        Assert.assertTrue(goodsPage.getNoGoods(noneProduct));
+//        Assert.assertTrue(goodsPage.getNoGoods(noneProduct));
+        Assert.assertFalse(goodsPage.isElementPresent(noneProduct));
         Log4Test.info("SUCCESS");
     }
 }

@@ -4,6 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeoutException;
+
 /**
  * Created by bionic on 11/5/14.
  */
@@ -32,6 +35,14 @@ public class GoodsPage {
         priceButton.click();
     }
 
+    public boolean isElementPresent(String goodName) {
+        try {
+            webDriver.findElement(By.xpath("//*[.='" + goodName + "']"));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
 
 
