@@ -34,6 +34,7 @@ public class MainPage {
     }
 
     public void pressLoginLink() {
+        Log4Test.info("press press Login Link");
         getLOGIN_LINK().click();
     }
 

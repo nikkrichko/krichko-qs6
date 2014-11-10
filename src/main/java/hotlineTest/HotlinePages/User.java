@@ -1,5 +1,7 @@
 package hotlineTest.HotlinePages;
 
+import hotlineTest.utils.Log4Test;
+
 public class User {
     private StringGenerator generator;
     private String userName;
@@ -8,6 +10,7 @@ public class User {
 
     public User() {
         generator = new StringGenerator();
+        Log4Test.info("generate new User");
         this.userName = generator.generator(8);
         this.userEmail = generator.generator(8) + "@ya.ru";
         this.password = generator.generator(8);

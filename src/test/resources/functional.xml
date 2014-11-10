@@ -5,7 +5,6 @@
         <parameter name="Email" value="yjrrdk@ya.ru"/>
         <parameter name="WrongEmail" value="yjrrdk"/>
         <classes>
-
             <class name="hotlineTest.functionalTest.FunctionalTest"/>
             <class name="hotlineTest.functionalTest.Register"/>
             <class name="hotlineTest.functionalTest.FindProduct"/>
