@@ -3,7 +3,6 @@ package hotlineTest.selenium;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.testng.Assert;
 
 public class WebDriverFactory {
