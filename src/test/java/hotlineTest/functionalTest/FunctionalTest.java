@@ -1,6 +1,9 @@
 package hotlineTest.functionalTest;
 
+import hotlineTest.selenium.WebDriverFactory;
+import hotlineTest.selenium.WebDriverWraper;
 import hotlineTest.utils.Log4Test;
+import hotlineTest.utils.PropertyLoader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
@@ -11,14 +14,14 @@ import org.testng.annotations.BeforeSuite;
  */
 public class FunctionalTest {
 
-    public static WebDriver webDriver;
+    public static WebDriverWraper webDriver;
 
     @BeforeSuite
     public static void startBrowser(){
 
         Log4Test.info("browser start");
         Log4Test.info("*************");
-        webDriver = new FirefoxDriver();
+        webDriver = WebDriverFactory.initDriver(PropertyLoader.loadProperty("browser.name"));
 
     }
 
