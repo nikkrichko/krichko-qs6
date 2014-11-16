@@ -1,9 +1,11 @@
 package hotlineTest.HotlinePages;
 
+import hotlineTest.selenium.WebDriverWraper;
 import hotlineTest.utils.Log4Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class MainPage {
     private WebDriver webDriver;
@@ -13,9 +15,11 @@ public class MainPage {
     private WebElement searchButton;
     private WebElement closeVisaBanner;
     private WebElement closeCity;
+    private WebElement bt;
+    private WebElement refrigerator;
     private String WebSiteName;
 
-    public MainPage(WebDriver webDriver, String WebSiteName) {
+    public MainPage(WebDriverWraper webDriver, String WebSiteName) {
         this.webDriver = webDriver;
         this.WebSiteName = WebSiteName;
         Log4Test.info("get main page");
@@ -60,25 +64,49 @@ public class MainPage {
         return SEARCH_STRING = webDriver.findElement(By.id("searchbox"));
     }
 
+    public WebElement getBt(){
+        return bt = webDriver.findElement(By.xpath("//a[@href='/bt/']"));
+    }
+
+    public WebElement getRefrigerator(){
+        return refrigerator = webDriver.findElement(By.xpath("//a[@href='/bt/holodilniki/']"));
+    }
+
+
+
     public WebElement getSearchButton() {
         return searchButton = webDriver.findElement(By.id("doSearch"));
     }
 
-//    public WebElement getCloseVisaBanner() {
-//        closeVisaBanner = webDriver.findElement(By.id("lightbox-form")).findElement(By.tagName("span"));
-//        return closeVisaBanner;
-//    }
-//
-//    public WebElement getCloseCity() {
-//        return closeCity = webDriver
-//                .findElement(By.className("rgn-box sbj popup-box region-doubtfulness-popup"))
-//                .findElement(By.className("close"));
-//    }
-//
-//    public void closeOtherElements() {
-//        if (getCloseVisaBanner().isDisplayed()) {
-//            getCloseVisaBanner().click();
-//        }
+    public void choseCategory(WebElement webElement){
+//        Actions action = new Actions(webDriver);
+//        action.moveToElement(webElement);
+//        action.perform();
+
+        Actions actions = new Actions(webDriver);
+        actions.moveToElement(webElement);
+        actions.perform();
+    }
+
+    public void pressRefrigeratorLink(){
+        getRefrigerator().click();
+    }
+
+    public WebElement getCloseVisaBanner() {
+        closeVisaBanner = webDriver.findElement(By.id("lightbox-form")).findElement(By.tagName("span"));
+        return closeVisaBanner;
+    }
+
+    public WebElement getCloseCity() {
+        return closeCity = webDriver
+                .findElement(By.className("rgn-box sbj popup-box region-doubtfulness-popup"))
+                .findElement(By.className("close"));
+    }
+
+    public void closeOtherElements() {
+        if (getCloseVisaBanner().isEnabled()) {
+            getCloseVisaBanner().click();
+        }
 //        if (getCloseCity().isDisplayed()){getCloseCity().click();}
-//    }
+    }
 }

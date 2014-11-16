@@ -87,4 +87,8 @@ public class WebDriverWraper implements WebDriver {
     public Options manage() {
         return webDriver.manage();
     }
+
+    public WebDriver getOriginalDriver(){
+        return webDriver;
+    }
 }

@@ -18,8 +18,8 @@ public class WebDriverFactory {
             driverWraper = new WebDriverWraper(new HtmlUnitDriver());
         }else {
             Assert.fail("invalid driver configuration");
+
         }
-        driverWraper.manage().window().maximize();
         return driverWraper;
     }
 }
