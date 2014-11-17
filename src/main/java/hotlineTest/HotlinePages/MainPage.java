@@ -79,16 +79,14 @@ public class MainPage {
     }
 
     public void choseCategory(WebElement webElement){
-//        Actions action = new Actions(webDriver);
-//        action.moveToElement(webElement);
-//        action.perform();
-
+        Log4Test.info("move to category");
         Actions actions = new Actions(webDriver);
         actions.moveToElement(webElement);
         actions.perform();
     }
 
     public void pressRefrigeratorLink(){
+        Log4Test.info("pressRefrigiratorLink");
         getRefrigerator().click();
     }
 
