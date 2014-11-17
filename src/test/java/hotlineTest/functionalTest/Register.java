@@ -7,10 +7,8 @@ import hotlineTest.HotlinePages.WelcomePage;
 import hotlineTest.utils.Log4Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
 public class Register extends FunctionalTest {
     WebDriver webDriver;
@@ -34,6 +32,13 @@ public class Register extends FunctionalTest {
     @BeforeMethod
     public void setup() throws NoSuchMethodException {
         mainPage = new MainPage(webDriver);
+        }
+
+    @AfterMethod
+    public void tearDown(ITestResult result) {
+            if (result.getStatus() == ITestResult.FAILURE) {
+                //your screenshooting code goes here
+            }
         }
 
     @Test(priority = 1)
