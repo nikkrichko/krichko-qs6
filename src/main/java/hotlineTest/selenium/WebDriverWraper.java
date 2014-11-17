@@ -12,7 +12,7 @@ import java.util.Set;
 public class WebDriverWraper implements WebDriver {
 
     private static WebDriver webDriver;
-    private final int TIME_OUT = 30;
+    private final int TIME_OUT = 60;
 
 
     public WebDriverWraper(WebDriver webDriver) {
