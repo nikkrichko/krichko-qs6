@@ -72,8 +72,6 @@ public class MainPage {
         return refrigerator = webDriver.findElement(By.xpath("//a[@href='/bt/holodilniki/']"));
     }
 
-
-
     public WebElement getSearchButton() {
         return searchButton = webDriver.findElement(By.id("doSearch"));
     }

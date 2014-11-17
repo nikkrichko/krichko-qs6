@@ -26,8 +26,6 @@ public class FindProduct extends FunctionalTest {
         Log4Test.info("###start test " + getClass().getName());
     }
 
-
-
     @BeforeMethod
     public void setup() {
         mainPage = new MainPage(webDriver);

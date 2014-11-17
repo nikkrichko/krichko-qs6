@@ -7,9 +7,6 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-/**
- * Created by никита on 09.11.2014.
- */
 public class ProductPage {
     private WebDriver webDriver;
     private List<WebElement> webElements;

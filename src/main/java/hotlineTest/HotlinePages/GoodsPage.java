@@ -7,15 +7,11 @@ import org.openqa.selenium.WebElement;
 import java.util.NoSuchElementException;
 import java.util.concurrent.TimeoutException;
 
-/**
- * Created by bionic on 11/5/14.
- */
 public class GoodsPage {
 
     WebDriver webDriver;
     private WebElement good;
     private WebElement priceButton;
-
 
     public GoodsPage(WebDriver webDriver) {
         this.webDriver = webDriver;

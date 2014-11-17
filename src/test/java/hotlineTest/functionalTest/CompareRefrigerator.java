@@ -36,7 +36,6 @@ public class CompareRefrigerator extends FunctionalTest {
     @Test(priority = 5)
     public void comprateTwoPrices(){
         mainPage.getMainPage();
-
 //        mainPage.closeOtherElements();
         mainPage.choseCategory(mainPage.getBt());
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

@@ -10,9 +10,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-/**
- * Created by никита on 09.11.2014.
- */
 public class ProductPrice extends FunctionalTest{
     WebDriver webDriver;
     String product = "iPhone";
