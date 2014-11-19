@@ -22,7 +22,6 @@ public class Register extends FunctionalTest {
     public void initDriver() {
         webDriver = FunctionalTest.webDriver;
         user = new User();
-        Log4Test.info("###start test " + getClass().getName());
     }
 
     @AfterClass
@@ -52,7 +51,6 @@ public class Register extends FunctionalTest {
         welcomePage = new WelcomePage(webDriver);
         Assert.assertTrue(welcomePage.getWELCOME_PAGE_FIRST_NAME().isDisplayed());
         Assert.assertTrue(welcomePage.getWELCOME_PAGE_SECOND_NAME().isDisplayed());
-        Log4Test.info("SUCCESS");
     }
 
     @Test(priority = 2)
@@ -63,7 +61,6 @@ public class Register extends FunctionalTest {
         registerPage = new RegisterPage(user, webDriver);
         registerPage.register();
         Assert.assertTrue(registerPage.getProof().isDisplayed());
-        Log4Test.info("SUCCESS");
     }
 
 }

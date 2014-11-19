@@ -38,7 +38,6 @@ public class FindProduct extends FunctionalTest {
         mainPage.serchProduct(product);
         goodsPage = new GoodsPage(webDriver);
         Assert.assertTrue(goodsPage.getGoods(product).isDisplayed());
-        Log4Test.info("SUCCESS");
     }
 
     @Test
@@ -48,6 +47,5 @@ public class FindProduct extends FunctionalTest {
         mainPage.serchProduct(noneProduct);
         goodsPage = new GoodsPage(webDriver);
         Assert.assertFalse(goodsPage.isElementPresent(noneProduct));
-        Log4Test.info("SUCCESS");
     }
 }

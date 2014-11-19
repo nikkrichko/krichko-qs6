@@ -25,7 +25,6 @@ public class CompareRefrigerator extends FunctionalTest {
     @BeforeClass
     public void initDriver() {
         webDriver = FunctionalTest.webDriver.getOriginalDriver();
-        Log4Test.info("###start test " + getClass().getName());
     }
 
     @BeforeMethod
