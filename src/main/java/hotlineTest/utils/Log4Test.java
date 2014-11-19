@@ -11,7 +11,7 @@ public class Log4Test {
 
     // ****************** Default message content ********************
     private static final String INFO_LOG = "INFO: \"%s\"";
-    private static final String ERROR_LOG = "ERROR: \"%s\" !";
+    private static final String ERROR_LOG = "########################ERROR: \"%s\" !";
     private static final String TEST_START = "***START_TEST: \"%s\"";
 
     public static String error (String message)

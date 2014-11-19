@@ -4,6 +4,7 @@ import hotlineTest.selenium.WebDriverWraper;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Augmenter;
 
 import java.io.File;
@@ -11,7 +12,7 @@ import java.io.IOException;
 
 
 public class ScreenShotMaker {
-    protected WebDriverWraper driver;
+    protected WebDriver driver;
     private static String screenShotDirectory;
 
     public static void clearScreenShotSubDirectory(String screenShotSubDirectory)
@@ -31,7 +32,7 @@ public class ScreenShotMaker {
 
     public ScreenShotMaker(WebDriverWraper driver)
     {
-        this.driver = driver ;
+        this.driver = driver.getOriginalDriver() ;
         screenShotDirectory = PropertyLoader.loadProperty("screenshot.folder");
         File scrDir = new File (screenShotDirectory);
         if (!scrDir.exists())
