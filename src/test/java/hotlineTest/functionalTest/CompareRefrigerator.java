@@ -2,16 +2,12 @@ package hotlineTest.functionalTest;
 
 import hotlineTest.HotlinePages.GoodsPage;
 import hotlineTest.HotlinePages.MainPage;
-import hotlineTest.utils.Log4Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -40,24 +36,13 @@ public class CompareRefrigerator extends FunctionalTest {
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         mainPage.pressRefrigeratorLink();
         goodsPage = new GoodsPage(webDriver);
-        webDriver.findElement(By.className("op_all")).click();
-        moveMouseDown();
-        ((JavascriptExecutor)webDriver).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
-                webDriver.findElement(By.className("jspPane")), "style", "padding: 0px 20px 0px 0px; width: 185px; top: -688px;");
-        webDriver.findElement(By.xpath("//*[@id='filters']//a[contains(text(),'West')]")).click();
-        Assert.assertTrue(true);
+        goodsPage.moveMouseDown(5);
+        goodsPage.FilterMark("LG");
+        goodsPage.sortBy("возрастанию цены");
 
+
+        Assert.assertTrue(goodsPage.compareprice());
     }
 
-    public void moveMouseDown()    {
-        Robot robot = null;
-        try {
-            robot = new Robot();
-        } catch (AWTException e) {
-            e.printStackTrace();
-        }
-        robot.setAutoDelay(900);
-        robot.mouseWheel(-10);
-    }
 
 }

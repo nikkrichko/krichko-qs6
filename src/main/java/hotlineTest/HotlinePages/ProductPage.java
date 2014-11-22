@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.awt.*;
 import java.util.List;
 
 public class ProductPage {
@@ -19,4 +20,7 @@ public class ProductPage {
         Log4Test.info("find more than one price");
         return webDriver.findElements(By.className("box")).size() > 1;
     }
+
+
+
 }
