@@ -37,11 +37,6 @@ public class MainPage {
         getREGISTER_LINK().click();
     }
 
-    public void pressLoginLink() {
-        Log4Test.info("press press Login Link");
-        getLOGIN_LINK().click();
-    }
-
     public void serchProduct(String productName) {
         Log4Test.info("type " + productName + "in serchField and find it");
         getSEARCH_STRING().sendKeys(productName);
@@ -54,10 +49,6 @@ public class MainPage {
 
     public WebElement getREGISTER_LINK() {
         return REGISTER_LINK = webDriver.findElement(By.className("reg"));
-    }
-
-    public WebElement getLOGIN_LINK() {
-        return LOGIN_LINK = webDriver.findElement(By.className("open-lightbox"));
     }
 
     public WebElement getSEARCH_STRING() {
@@ -93,16 +84,4 @@ public class MainPage {
         return closeVisaBanner;
     }
 
-    public WebElement getCloseCity() {
-        return closeCity = webDriver
-                .findElement(By.className("rgn-box sbj popup-box region-doubtfulness-popup"))
-                .findElement(By.className("close"));
-    }
-
-    public void closeOtherElements() {
-        if (getCloseVisaBanner().isEnabled()) {
-            getCloseVisaBanner().click();
-        }
-//        if (getCloseCity().isDisplayed()){getCloseCity().click();}
-    }
 }

@@ -10,9 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by никита on 16.11.2014.
- */
+
 public class CompareRefrigerator extends FunctionalTest {
     WebDriver webDriver;
     MainPage mainPage;
@@ -31,7 +29,6 @@ public class CompareRefrigerator extends FunctionalTest {
     @Test(priority = 5)
     public void comprateTwoPrices(){
         mainPage.getMainPage();
-//        mainPage.closeOtherElements();
         mainPage.choseCategory(mainPage.getBt());
         webDriver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         mainPage.pressRefrigeratorLink();
@@ -39,8 +36,6 @@ public class CompareRefrigerator extends FunctionalTest {
         goodsPage.moveMouseDown(5);
         goodsPage.FilterMark("LG");
         goodsPage.sortBy("возрастанию цены");
-
-
         Assert.assertTrue(goodsPage.compareprice());
     }
 

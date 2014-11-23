@@ -2,7 +2,6 @@ package hotlineTest.HotlinePages;
 
 import hotlineTest.utils.Log4Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -20,10 +19,6 @@ public class GoodsPage {
 
     public WebElement getGoods(String goodName) {
         return good = webDriver.findElement(By.xpath("//*[.='" + goodName + "']"));
-    }
-
-    public boolean getNoGoods(String goodName) {
-        return webDriver.findElements(By.xpath("//*[.='" + goodName + "']")).isEmpty() ;
     }
 
     public void productPrice(){
@@ -52,15 +47,6 @@ public class GoodsPage {
         robot.setAutoDelay(500);
         robot.mouseWheel(i);
         robot.setAutoDelay(500);
-    }
-
-    public void moveToMarkPanel(){
-        Log4Test.info("search find all marks");
-        webDriver.findElement(By.xpath("//*[@class='switcher to-full op_all']")).click();
-        Log4Test.info("execute javaScript");
-        ((JavascriptExecutor)webDriver).executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
-                webDriver.findElement(By.className("jspPane")), "style", "padding: 0px 20px 0px 0px; width: 185px; top: -688px;");
-        moveMouseDown(-3);
     }
 
     public void FilterMark(String mark){
