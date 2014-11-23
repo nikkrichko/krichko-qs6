@@ -4,27 +4,20 @@ import hotlineTest.HotlinePages.GoodsPage;
 import hotlineTest.HotlinePages.MainPage;
 import hotlineTest.HotlinePages.ProductPage;
 import hotlineTest.utils.Log4Test;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class ProductPrice extends FunctionalTest{
-    WebDriver webDriver;
+
     String product = "iPhone";
     MainPage mainPage;
     GoodsPage goodsPage;
     ProductPage productPage;
 
-    @BeforeClass
-    public void initDriver(){
-        webDriver = FunctionalTest.webDriver;
-        mainPage = new MainPage(webDriver);
-    }
-
     @BeforeMethod
     public void initTest(){
+        mainPage = new MainPage(webDriver);
         mainPage.getMainPage();
         mainPage.serchProduct(product);
     }

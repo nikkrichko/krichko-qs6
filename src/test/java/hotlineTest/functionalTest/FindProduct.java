@@ -3,9 +3,7 @@ package hotlineTest.functionalTest;
 import hotlineTest.HotlinePages.GoodsPage;
 import hotlineTest.HotlinePages.MainPage;
 import hotlineTest.utils.Log4Test;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -14,17 +12,11 @@ import org.testng.annotations.Test;
  */
 public class FindProduct extends FunctionalTest {
 
-    WebDriver webDriver;
+
     MainPage mainPage;
     GoodsPage goodsPage;
     String product = "iPhone";
     String noneProduct = "yablophone";
-
-    @BeforeClass
-    public void initDriver() {
-        webDriver = FunctionalTest.webDriver;
-        Log4Test.info("###start test " + getClass().getName());
-    }
 
     @BeforeMethod
     public void setup() {

@@ -5,37 +5,36 @@ import hotlineTest.HotlinePages.RegisterPage;
 import hotlineTest.HotlinePages.User;
 import hotlineTest.HotlinePages.WelcomePage;
 import hotlineTest.utils.Log4Test;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 public class Register extends FunctionalTest {
-    WebDriver webDriver;
+
     MainPage mainPage;
     RegisterPage registerPage;
     WelcomePage welcomePage;
     User user;
 
-
     @BeforeClass
-    public void initDriver() {
-        webDriver = FunctionalTest.webDriver;
+    public void initUser(){
         user = new User();
     }
 
     @BeforeMethod
     public void setup() throws NoSuchMethodException {
+
         mainPage = new MainPage(webDriver);
         }
 
     @AfterMethod
     public void tearDown(ITestResult result) {
             if (result.getStatus() == ITestResult.FAILURE) {
-
-
             }
-        }
+    }
 
     @Test(priority = 1)
     public void registerTest() {

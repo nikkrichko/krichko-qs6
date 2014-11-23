@@ -20,14 +20,12 @@ public class FunctionalTest {
     public static WebDriverWraper webDriver;
     public static ScreenShotMaker screenShotMaker;
 
-//    public static WebDriver webDriver;
     @BeforeSuite
     public static void startBrowser(){
 
         Log4Test.info("browser start");
         Log4Test.info("*************");
         webDriver = WebDriverFactory.initDriver(PropertyLoader.loadProperty("browser.name"));
-//        webDriver = new FirefoxDriver();
         screenShotMaker = new ScreenShotMaker(webDriver);
         webDriver.manage().window().maximize();
     }
