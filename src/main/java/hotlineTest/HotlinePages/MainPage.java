@@ -1,6 +1,5 @@
 package hotlineTest.HotlinePages;
 
-import hotlineTest.selenium.WebDriverWraper;
 import hotlineTest.utils.Log4Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,12 +17,6 @@ public class MainPage {
     private WebElement bt;
     private WebElement refrigerator;
     private String WebSiteName;
-
-    public MainPage(WebDriverWraper webDriver, String WebSiteName) {
-        this.webDriver = webDriver;
-        this.WebSiteName = WebSiteName;
-        Log4Test.info("get main page");
-    }
 
     public MainPage(WebDriver webDriver) {
         Log4Test.info("get main page");

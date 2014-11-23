@@ -9,6 +9,14 @@ public class WelcomePage {
 
     WebDriver webDriver;
     private WebElement WELCOME_PAGE_FIRST_NAME;
+    private WebElement WELCOME_PAGE_SECOND_NAME;
+
+    public WelcomePage(WebDriver webDriver) {
+        this.webDriver = webDriver;
+        Log4Test.info("find field on welcome page");
+        WELCOME_PAGE_FIRST_NAME = webDriver.findElement(By.name("first_name"));
+        WELCOME_PAGE_SECOND_NAME = webDriver.findElement(By.name("last_name"));
+    }
 
     public WebElement getWELCOME_PAGE_FIRST_NAME() {
         return WELCOME_PAGE_FIRST_NAME;
@@ -18,14 +26,7 @@ public class WelcomePage {
         return WELCOME_PAGE_SECOND_NAME;
     }
 
-    private WebElement WELCOME_PAGE_SECOND_NAME;
 
-    public WelcomePage(WebDriver webDriver) {
-        this.webDriver = webDriver;
-        Log4Test.info("find field on welcome page");
-        WELCOME_PAGE_FIRST_NAME = webDriver.findElement(By.name("first_name"));
-        WELCOME_PAGE_SECOND_NAME = webDriver.findElement(By.name("last_name"));
-    }
 
 
 }
