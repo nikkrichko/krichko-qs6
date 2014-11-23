@@ -49,9 +49,9 @@ public class GoodsPage {
         } catch (AWTException e) {
             e.printStackTrace();
         }
-        robot.setAutoDelay(10000);
+        robot.setAutoDelay(500);
         robot.mouseWheel(i);
-        robot.setAutoDelay(10000);
+        robot.setAutoDelay(500);
     }
 
     public void moveToMarkPanel(){

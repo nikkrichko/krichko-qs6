@@ -24,10 +24,6 @@ public class Register extends FunctionalTest {
         user = new User();
     }
 
-    @AfterClass
-    public void closeBrowser() {
-    }
-
     @BeforeMethod
     public void setup() throws NoSuchMethodException {
         mainPage = new MainPage(webDriver);
